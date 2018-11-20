@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 #include "BST312.h"
 
 using namespace std;
@@ -28,11 +29,13 @@ int main() {
    
     string s;
     inFile >> s;
-    while (inFile) {;
+
+    while (inFile) {
         cout << "inserting " << s << endl;
         bst.insertItem(s);
         inFile >> s;
     }
+
     cout << "postorder traversal is " << endl;
     print(bst.postOrderTraversal());
     cout << endl;

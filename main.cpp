@@ -29,11 +29,10 @@ int main() {
     string s;
     inFile >> s;
     while (inFile) {;
-        cout << "inserting ... " << s << endl;
+        cout << "inserting " << s << endl;
         bst.insertItem(s);
         inFile >> s;
     }
-
     cout << "postorder traversal is " << endl;
     print(bst.postOrderTraversal());
     cout << endl;
@@ -47,6 +46,7 @@ int main() {
     cout << endl;
 
     cout << "Remove items " << endl;
+
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
     s = "tree";
     bst.deleteItem(s);
